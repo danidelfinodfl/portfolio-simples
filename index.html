@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio Galáctico - Danielle Delfino</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fundo canvas animado -->
+  <canvas id="background"></canvas>
+
+  <header>
+    <h1>Danielle Delfino</h1>
+    <nav>
+      <ul>
+        <li><button class="nav-btn" data-target="sobre">Sobre Mim</button></li>
+        <li><button class="nav-btn" data-target="formacao">Formação</button></li>
+        <li><button class="nav-btn" data-target="portfolio">Portfólio</button></li>
+        <li><button class="nav-btn" data-target="contato">Contato</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre" class="section">
+      <h2>Sobre Mim</h2>
+      <img src="img/dani.jpg" alt="Foto de Danielle Delfino" class="foto-sobre" />
+      <p>
+        Sou Danielle, desenvolvedora em formação, oraculista e mãe apaixonada por aprender! 
+        Adoro explorar o universo do código e o mistério da galáxia.
+      </p>
+    </section>
+
+    <section id="formacao" class="section">
+      <h2>Formação</h2>
+      <ul>
+        <li>Ensino Superior Cursando</li>
+      </ul>
+      <p><strong>Idiomas:</strong> Português (nativo), Inglês (intermediário)</p>
+    </section>
+
+    <section id="portfolio" class="section">
+      <h2>Portfólio</h2>
+      <ul>
+        <li><a href="https://github.com/danidelfinodfl/meu-portfolio-galactico" target="_blank" rel="noopener">Meu Portfólio no GitHub</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Projeto de JavaScript - Site interativo</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Exemplo de Layout Responsivo</a></li>
+      </ul>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+
+        <input type="submit" value="Enviar" />
+      </form>
+
+      <div class="contatos-info">
+        <p>📧 <a href="mailto:dhandelfino@gmail.com">dhandelfino@gmail.com</a></p>
+        <p>📞 <a href="tel:+5511948047984">(11) 94804-7984</a></p>
+        <p>🐙 <a href="https://github.com/danidelfinodfl" target="_blank" rel="noopener">danidelfinodfl</a></p>
+        <p>🔗 LinkedIn: <a href="#" target="_blank" rel="noopener">https://www.linkedin.com/in/danielle-delfino-leite-a7171727b/</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0ff;
+}
+
+body, html {
+  height: 100%;
+  background: black;
+  overflow-x: hidden;
+}
+
+/* Canvas fundo ocupa tudo */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: black;
+}
+
+/* Cabeçalho */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #0ff;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #0ff;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+.nav-btn {
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #0ff;
+  color: black;
+}
+
+/* Seções */
+.section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #0ff;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-bottom: 2px solid #0ff;
+  padding-bottom: 10px;
+}
+
+/* Foto sobre mim */
+.foto-sobre {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  box-shadow: 0 0 15px #0ff;
+  border: 3px solid #0ff;
+}
+
+/* Limpar float */
+.section p::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Lista da formação e portfólio */
+ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  list-style-type: disc;
+  font-size: 1.1rem;
+}
+
+/* Formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #0ff;
+  background: transparent;
+  color: #0ff;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #b388ff;
+  outline: none;
+}
+
+/* Botão enviar */
+input[type="submit"] {
+  width: 120px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  background-color: #0ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+input[type="submit"]:hover {
+  background-color: #b388ff;
+}
+
+/* Contatos info */
+.contatos-info {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #0ff;
+  line-height: 1.6;
+}
+
+.contatos-info a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contatos-info a:hover {
+  color: #b388ff;
+  text-decoration: underline;
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  .foto-sobre {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+}
